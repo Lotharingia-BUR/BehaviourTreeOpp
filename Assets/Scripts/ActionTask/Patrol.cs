@@ -1,18 +1,14 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class PatrolAT : ActionTask {
-        NavMeshAgent myNavMeshAgent;
-		public BBParameter<List<Transform>> points;
-		public BBParameter<int> currentPoint;
-		public BBParameter<bool> isTraveling;
-        protected override string OnInit() {
+	public class Patrol : ActionTask {
+
+		//Use for initialization. This is called only once in the lifetime of the task.
+		//Return null if init was successfull. Return an error string otherwise
+		protected override string OnInit() {
 			return null;
 		}
 
@@ -20,7 +16,6 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			Debug.Log(currentPoint.value);
 			EndAction(true);
 		}
 
