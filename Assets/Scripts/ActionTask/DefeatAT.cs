@@ -1,16 +1,18 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
 	public class DefeatAT : ActionTask {
-
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
-			return null;
+        NavMeshAgent NavAgent;
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
+            NavAgent = agent.GetComponent<NavMeshAgent>();
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
