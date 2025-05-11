@@ -8,20 +8,24 @@ using UnityEngine.AI;
 namespace NodeCanvas.Tasks.Actions {
 
 	public class PatrolAT : ActionTask {
-        NavMeshAgent myNavMeshAgent;
+        NavMeshAgent NavAgent;
 		public BBParameter<List<Transform>> points;
+		public BBParameter<Transform> targetPos;
 		public BBParameter<int> currentPoint;
-		public BBParameter<bool> isTraveling;
         protected override string OnInit() {
-			return null;
+            NavAgent = agent.GetComponent<NavMeshAgent>();
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			targetPos.value = points.value[currentPoint.value];
 			Debug.Log(currentPoint.value);
-			EndAction(true);
+			NavAgent.SetDestination(targetPos.value.position);
+
+            EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
