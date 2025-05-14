@@ -31,7 +31,7 @@ namespace NodeCanvas.Tasks.Conditions {
 			{
 				return true;
 			}
-			Debug.Log((agent.transform.position - targetPos.value.position).magnitude);
+			/*Debug.Log((agent.transform.position - targetPos.value.position).magnitude);*/
 			return false;
 		}
 	}

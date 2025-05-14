@@ -14,7 +14,7 @@ public class Statue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isTriggred);
+        /*Debug.Log(isTriggred);*/
     }
 
     private void OnTrigger(Collision collision)
