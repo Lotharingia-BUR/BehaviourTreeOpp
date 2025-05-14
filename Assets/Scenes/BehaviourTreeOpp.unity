@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 1483470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.9530115}
+  m_LocalPosition: {x: -9.8, y: 0, z: 6.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -625,12 +625,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"State":{"_name":"State","_id":"a30a717f-c227-46be-9241-0cffe2d67c54","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
-  _objectReferences: []
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"playerPos":{"_value":1,"_name":"playerPos","_id":"6ca41426-7f3c-49ff-8743-e7b9c76ca014","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"ghostPos":{"_value":2,"_name":"ghostPos","_id":"4084c3a7-c1c3-4f8c-84b1-a7b31c991a93","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 1461402185}
+  - {fileID: 418510531}
   _serializedVariables:
   - _json: '{"_name":"State","_id":"a30a717f-c227-46be-9241-0cffe2d67c54","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
+  - _json: '{"_value":1,"_name":"playerPos","_id":"6ca41426-7f3c-49ff-8743-e7b9c76ca014","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1461402185}
+  - _json: '{"_value":1,"_name":"ghostPos","_id":"4084c3a7-c1c3-4f8c-84b1-a7b31c991a93","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 418510531}
 --- !u!114 &161922313
 MonoBehaviour:
   m_ObjectHideFlags: 0
