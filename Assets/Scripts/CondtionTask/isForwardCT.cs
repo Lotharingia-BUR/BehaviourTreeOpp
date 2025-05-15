@@ -34,7 +34,7 @@ namespace NodeCanvas.Tasks.Conditions {
 			directionToTarget = selfPos.value.position - targetPos.value.position;
 			angle = Vector3.Angle(selfPos.value.forward, directionToTarget);
 
-			if (Mathf.Abs(angle) < 90)
+			if (Mathf.Abs(angle) < 200 && Mathf.Abs(angle) > 160)
 			{
 				Debug.Log("In Front");
                 return true;
